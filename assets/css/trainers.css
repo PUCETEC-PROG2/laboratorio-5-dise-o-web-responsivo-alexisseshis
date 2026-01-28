@@ -1,0 +1,73 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+}
+.trainers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+.trainer-card {
+    background-color: aquamarine;
+    border: 3px solid #FFD93D;
+    border-radius: 24px;
+    box-shadow: inset;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex:calc(33.333% - 32px);
+    max-width: calc(33.333% - 32px);
+    min-width: 200px;
+}
+.trainer-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgb(11, 248, 66) ;
+}
+.trainer-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: rgba(61, 220, 245, 0.795);
+}
+.trainer-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.trainer-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin: 0%;
+}
+.trainer-region {
+    font-size: 14px;
+    color: black;
+    margin: 0%;
+}
+.trainer-badges {
+    display: flex;
+    gap: 8px;
+}
+.status-champion {
+    background-image: linear-gradient(90deg, rgb(218, 153, 33) 0%, rgb(58, 144, 209) 100%);
+}
+.status-active {
+    background-image: linear-gradient(70deg, rgb(33, 218, 47) 0%, rgb(47, 216, 216) 100%);
+}
+.status-investing {
+    background-image: linear-gradient(70deg, rgb(37, 180, 224) 0%, rgb(217, 247, 253) 100%);
+}
+@media screen and (max-width: 768px) {
+    .trainer-card {
+        flex: calc(50% - 32px);
+        max-width: calc(50% - 32px);
+    }
+}
